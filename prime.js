@@ -1,9 +1,17 @@
 function checkPrime(num){
-for(i=0;i<=num;i++){
-if(num%2!==0){
-return true;
+let factor=0;
+for(i=1;i<=num;i++){
+if(num%i==0){
+factor++;
 }
+if(factor==2){
+return true;
 }
 return false;
 }
-checkPrime(7);
+let ans=checkPrime(7);
+if(ans==true){
+console.log("Prime number");
+}else{
+console.log("Not a Prime number");
+}
