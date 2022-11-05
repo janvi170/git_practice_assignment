@@ -1,15 +1,18 @@
-function checkPrime(n) {
-  for (let i = 2; i < n; i++) {
-    if (n % i === 0) {
-      flag = true;
-      break;
-    }
-  }
-  if (flag) {
-    console.log("Not Prime");
-  } else {
-    console.log("Prime");
-  }
-}
 
-checkPrime(10);
+function checkPrime(num){
+let factor=0;
+for(i=1;i<=num;i++){
+if(num%i==0){
+factor++;
+}
+if(factor==2){
+return true;
+}
+return false;
+}
+let ans=checkPrime(7);
+if(ans==true){
+console.log("Prime number");
+}else{
+console.log("Not a Prime number");
+}
