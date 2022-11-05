@@ -1,9 +1,15 @@
-function checkPrime(num){
-for(i=0;i<=num;i++){
-if(num%2!==0){
-return true;
+function checkPrime(n) {
+  for (let i = 2; i < n; i++) {
+    if (n % i === 0) {
+      flag = true;
+      break;
+    }
+  }
+  if (flag) {
+    console.log("Not Prime");
+  } else {
+    console.log("Prime");
+  }
 }
-}
-return false;
-}
-checkPrime(7);
+
+checkPrime(10);
